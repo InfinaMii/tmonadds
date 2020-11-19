@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "A/C7Z1OWXTwToluotUFgn3wNGQ+fTrsBUwe16lQbn9iwnoN2rkGQe0AN1lbjf7RmL6ObAjV3gOKxFD5K2rZbzA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\popin\\Documents\\My Games\\Terraria\\ModLoader\\Mod Sources\\tmonadds\\tmonadds.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\popin\\.nuget\\packages\\tmodloader.codeassist\\0.1.1\\tmodloader.codeassist.0.1.1.nupkg.sha512"
+  ],
+  "logs": []
+}

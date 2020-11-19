@@ -1,0 +1,3 @@
+displayName = Terramon Expansion
+author = Terramon Team
+version = 0.1
