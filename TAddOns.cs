@@ -8,7 +8,7 @@ using Terraria;
 using Terraria.GameContent.UI;
 using Terraria.Graphics.Effects;
 using Terraria.Graphics.Shaders;
-using tmonadds.Items.Music;
+using tmonadds;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
@@ -16,8 +16,11 @@ using Terraria.UI;
 
 namespace tmonadds
 {
-	class TAddOns : Mod
+	public class TAddOns : Mod
 	{
+		public static bool PokeMini = false;
+		public static int MusicTimer;
+		public static int MusicCheck;
 
 		public TAddOns()
 		{
@@ -47,19 +50,25 @@ namespace tmonadds
 			if (Main.myPlayer == -1 || Main.gameMenu || !Main.LocalPlayer.active) return;
 
 			Player player = Main.LocalPlayer;
-			if (MusicBoy.MusicEquipped == true)
+			if (PokeMini == true)
 			{
 				if (player.ZoneSnow && !Main.dayTime)
 				{
-					music = GetSoundSlot(SoundType.Music, "Sounds/Music/LakeVerity");
+					music = GetSoundSlot(SoundType.Music, "Sounds/Music/PokeMini/LakeVerity");
 					priority = MusicPriority.BiomeHigh;
 				}
 				else if (player.ZoneBeach && !Main.dayTime)
 				{
-					music = GetSoundSlot(SoundType.Music, "Sounds/Music/UndellaTown");
+					music = GetSoundSlot(SoundType.Music, "Sounds/Music/PokeMini/UndellaTown");
 					priority = MusicPriority.BiomeHigh;
-				}
-			}
-		}
-	}
+                }
+
+				MusicCheck += 1;
+                if (MusicCheck > MusicTimer)
+                {
+                    PokeMini = false;
+                }
+            }
+        }
+    }
 }

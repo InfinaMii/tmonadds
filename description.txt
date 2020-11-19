@@ -8,4 +8,5 @@
 [c/4de857:== ✧ Credits ✧ ==]
 • Jamz: Developer
 • Infina: Developer, Spriter
+• ItzSylvium: Spriter
 • Piers: Transformation Code

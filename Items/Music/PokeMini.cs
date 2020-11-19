@@ -6,12 +6,11 @@ using Terraria;
 
 namespace tmonadds.Items.Music
 {
-	public class MusicBoy : ModItem
+	public class PokeMini : ModItem
 	{
-		public static bool MusicEquipped = false;
 
 		public override void SetStaticDefaults() {
-			DisplayName.SetDefault("Music Boy");
+			DisplayName.SetDefault("Pokemon Mini");
 		}
 
 		public override void SetDefaults() {
@@ -23,8 +22,9 @@ namespace tmonadds.Items.Music
 		}
 
 		public override void UpdateAccessory(Player player, bool hideVisual)
-		{
-			MusicEquipped = true;
+        {
+            TAddOns.PokeMini = true;
+			TAddOns.MusicTimer += 1;
 		}
-	}
+}
 }

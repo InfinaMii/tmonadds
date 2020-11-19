@@ -17,7 +17,7 @@ namespace tmonadds
         int count = 1;
         int previous = -1;
         public bool nullified = false;
-
+        public bool PokeMini = false;
         public bool Pikachu = false;
         public bool PikachuDefault = false;
         bool PikachuActive = false;
