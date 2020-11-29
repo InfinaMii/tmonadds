@@ -35,14 +35,22 @@ namespace tmonadds
 		public override void Load()
 		{
 
-			if (!Main.dedServ)
+			AddMusicBox(GetSoundSlot(SoundType.Music, "Sounds/Music/GameBoy/GB_TitleScreen"), ItemType("GameBoyGray"), TileType("TileBoyGray"));
+			AddMusicBox(GetSoundSlot(SoundType.Music, "Sounds/Music/GameBoy/GB_TrainerBattle"), ItemType("GameBoyRed"), TileType("TileBoyRed"));
+			AddMusicBox(GetSoundSlot(SoundType.Music, "Sounds/Music/GameBoy/GB_PalletTown"), ItemType("GameBoyBlue"), TileType("TileBoyBlue"));
+			AddMusicBox(GetSoundSlot(SoundType.Music, "Sounds/Music/GameBoy/GB_FinalBattle"), ItemType("GameBoyYellow"), TileType("TileBoyYellow"));
+			AddMusicBox(GetSoundSlot(SoundType.Music, "Sounds/Music/GameBoy/GB_PewterCity"), ItemType("GameBoyTeal"), TileType("TileBoyTeal"));
+			AddMusicBox(GetSoundSlot(SoundType.Music, "Sounds/Music/GameBoy/GB_PokemonCenter"), ItemType("GameBoyPink"), TileType("TileBoyPink"));
+			AddMusicBox(GetSoundSlot(SoundType.Music, "Sounds/Music/GameBoy/GB_LavenderTown"), ItemType("GameBoyDark"), TileType("TileBoyDark"));
+
+			/*if (!Main.dedServ)
 			{
 				
 				AddEquipTexture(new Costumes.Pikachu.PikachuHead(), null, EquipType.Head, "PikachuHead", "tmonadds/Costumes/Pikachu/PikachuTransformation_Head");
 				AddEquipTexture(new Costumes.Pikachu.PikachuBody(), null, EquipType.Body, "PikachuBody", "tmonadds/Costumes/Pikachu/PikachuTransformation_Body", "tmonadds/Costumes/Pikachu/PikachuTransformation_Arms", "tmonadds/Costumes/Pikachu/PikachuTransformation_Body");
 				AddEquipTexture(new Costumes.Pikachu.PikachuLegs(), null, EquipType.Legs, "PikachuLegs", "tmonadds/Costumes/Pikachu/PikachuTransformation_Legs");
 
-			}
+			}*/
 		}
 
 		public override void UpdateMusic(ref int music, ref MusicPriority priority)

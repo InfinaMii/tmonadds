@@ -10,7 +10,15 @@ namespace tmonadds.Items.Music.GameBoy
                                       "\n[c/FFFF66:Soundtrack: Title Screen]";
 
 
-        public GameBoyGray() : base("Gray", TOOLTIP, Item.sellPrice(gold: 5), ItemRarityID.Orange, "TitleScreen")
+        public GameBoyGray() : base("Gray", TOOLTIP, Item.sellPrice(gold: 5), ItemRarityID.Orange)
+        {
+        }
+    }
+
+    public class TileBoyGray : TileBoy
+    {
+
+        public TileBoyGray() : base("Gray")
         {
         }
     }

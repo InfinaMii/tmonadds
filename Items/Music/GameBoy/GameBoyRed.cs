@@ -10,8 +10,15 @@ namespace tmonadds.Items.Music.GameBoy
                                       "\n[c/FFFF66:Soundtrack: Trainer Battle]";
 
 
-        public GameBoyRed() : base("Red", TOOLTIP, Item.sellPrice(gold: 5), ItemRarityID.Orange,
-            "TrainerBattle")
+        public GameBoyRed() : base("Red", TOOLTIP, Item.sellPrice(gold: 5), ItemRarityID.Orange)
+        {
+        }
+    }
+
+    public class TileBoyRed : TileBoy
+    {
+
+        public TileBoyRed() : base("Red")
         {
         }
     }

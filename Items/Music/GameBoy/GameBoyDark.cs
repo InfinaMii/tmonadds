@@ -10,7 +10,15 @@ namespace tmonadds.Items.Music.GameBoy
                                       "\n[c/FFFF66:Soundtrack: Lavender Town]";
 
 
-        public GameBoyDark() : base("Dark", TOOLTIP, Item.sellPrice(gold: 6, silver: 6, copper: 6), ItemRarityID.Orange, "Lavender")
+        public GameBoyDark() : base("Dark", TOOLTIP, Item.sellPrice(gold: 6, silver: 6, copper: 6), ItemRarityID.Orange)
+        {
+        }
+    }
+
+    public class TileBoyDark : TileBoy
+    {
+
+        public TileBoyDark() : base("Dark")
         {
         }
     }

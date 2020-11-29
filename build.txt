@@ -3,3 +3,4 @@ author = Terramon Team
 version = 0.1
 homepage = https://terramonmod.com/wiki/#/
 modReferences = Terramon
+buildIgnore = Pokemon/*, Costumes/*
