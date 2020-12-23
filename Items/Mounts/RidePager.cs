@@ -20,7 +20,7 @@ namespace tmonadds.Items.Mounts
 			item.rare = ItemRarityID.Green;
 			item.UseSound = SoundID.Item79;
 			item.noMelee = true;
-			item.mountType = MountType<Lapras.Lapras>();
+			item.mountType = MountType<Latis.Latias>();
 		}
 	}
 }

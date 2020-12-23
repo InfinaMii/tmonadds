@@ -49,7 +49,7 @@ namespace tmonadds
 
         //Playable Character Buffs
 
-        public override void PostUpdateEquips()
+        /*public override void PostUpdateEquips()
         {
             if (Pikachu)
             {
@@ -169,6 +169,6 @@ namespace tmonadds
                 Main.PlaySound(customSoundType, (int)Main.player[Main.myPlayer].position.X, (int)Main.player[Main.myPlayer].position.Y, currentSound, 0.9f, 0f);
             }
             return true;
-        }
+        }*/
     }
 }

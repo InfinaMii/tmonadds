@@ -39,9 +39,10 @@ namespace tmonadds
 			AddMusicBox(GetSoundSlot(SoundType.Music, "Sounds/Music/GameBoy/GB_TrainerBattle"), ItemType("GameBoyRed"), TileType("TileBoyRed"));
 			AddMusicBox(GetSoundSlot(SoundType.Music, "Sounds/Music/GameBoy/GB_PalletTown"), ItemType("GameBoyBlue"), TileType("TileBoyBlue"));
 			AddMusicBox(GetSoundSlot(SoundType.Music, "Sounds/Music/GameBoy/GB_FinalBattle"), ItemType("GameBoyYellow"), TileType("TileBoyYellow"));
-			AddMusicBox(GetSoundSlot(SoundType.Music, "Sounds/Music/GameBoy/GB_PewterCity"), ItemType("GameBoyTeal"), TileType("TileBoyTeal"));
+			AddMusicBox(GetSoundSlot(SoundType.Music, "Sounds/Music/GameBoy/GB_PewterCity"), ItemType("GameBoyGreen"), TileType("TileBoyGreen"));
 			AddMusicBox(GetSoundSlot(SoundType.Music, "Sounds/Music/GameBoy/GB_PokemonCenter"), ItemType("GameBoyPink"), TileType("TileBoyPink"));
 			AddMusicBox(GetSoundSlot(SoundType.Music, "Sounds/Music/GameBoy/GB_LavenderTown"), ItemType("GameBoyDark"), TileType("TileBoyDark"));
+			
 
 			/*if (!Main.dedServ)
 			{
@@ -60,7 +61,17 @@ namespace tmonadds
 			Player player = Main.LocalPlayer;
 			if (PokeMini == true)
 			{
-				if (player.ZoneSnow && !Main.dayTime)
+				if (player.HasBuff(BuffType("Latias")) && Main.dayTime)
+                {
+					music = GetSoundSlot(SoundType.Music, "Sounds/Music/PokeMini/SoaringDreams");
+					priority = MusicPriority.BiomeHigh;
+				}
+				else if (player.HasBuff(BuffType("Latias")) && !Main.dayTime)
+                {
+					music = GetSoundSlot(SoundType.Music, "Sounds/Music/PokeMini/SoaringIllusions");
+					priority = MusicPriority.BiomeHigh;
+				}
+				else if (player.ZoneSnow && !Main.dayTime)
 				{
 					music = GetSoundSlot(SoundType.Music, "Sounds/Music/PokeMini/LakeVerity");
 					priority = MusicPriority.BiomeHigh;
