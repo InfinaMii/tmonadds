@@ -12,3 +12,5 @@
 • InfinaMii: Developer, Spriter
 • ItzSylvium: Spriter
 • Piers: Transformation Code
+
+, Items/Mounts*, Items/Music/PokeMini.cs, Sounds/Music/PokeMini*

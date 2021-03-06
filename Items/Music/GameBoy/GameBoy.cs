@@ -12,9 +12,12 @@ namespace tmonadds.Items.Music.GameBoy
         /// <param name="tooltip"></param>
         /// <param name="value"></param>
         /// <param name="rarity"></param>
-        protected GameBoy(string color, string tooltip, int value, int rarity) : base(
+        protected GameBoy(string color, string tooltip, int value, int rarity, string musicPath) : base(
             $"Game Boy ({color})", tooltip, 22, 32, value, 0, rarity)
-        { colour = color; }
+        {
+            MusicPath = musicPath;
+            colour = color;
+        }
 
 
         public override void SetDefaults()
@@ -32,7 +35,20 @@ namespace tmonadds.Items.Music.GameBoy
             item.createTile = mod.TileType($"TileBoy{colour}");
         }
 
+        public override void UpdateAccessory(Player player, bool hideVisual)
+        {
+            base.UpdateAccessory(player, hideVisual);
+            //TAddOns.Musics = MusicPath;
+            string Ver;
+            if (TAddOns.OldMusic)
+                Ver = "_Old";
+            else
+                Ver = "_New";
+            Main.musicBox2 = mod.GetSoundSlot(SoundType.Music, $"Sounds/Music/GameBoy/GB_{MusicPath}{Ver}");
+        }
+
         public string colour { get; }
+        public string MusicPath { get; }
     }
 
     public abstract class TileBoy : ModTile
@@ -72,7 +88,7 @@ namespace tmonadds.Items.Music.GameBoy
             }
         }
 
-        public override void MouseOver(int i, int j)
+        /*public override void MouseOver(int i, int j)
         {
             Player player = Main.LocalPlayer;
             player.noThrow = 2;
@@ -87,7 +103,7 @@ namespace tmonadds.Items.Music.GameBoy
             {
                 player.showItemIcon2 = mod.ItemType("switchIcon2");
             }
-        }
+        }*/
 
         public string colour { get; }
     }

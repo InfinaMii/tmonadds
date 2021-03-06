@@ -6,11 +6,11 @@ namespace tmonadds.Items.Music.GameBoy
     public class GameBoyGray : GameBoy
     {
         public const string TOOLTIP = "It's an 8-bit handheld console." +
-                                      "\n[c/33ceff:Equip this to listen to music from Pokémon Fire Red!]" +
-                                      "\n[c/FFFF66:Soundtrack: Title Screen]";
+                                      "\n[c/33ceff:Equip this to listen to music from Kanto!]" +
+                                      "\n[c/FFFF66:Soundtrack: Oak's Lab]";
 
 
-        public GameBoyGray() : base("Gray", TOOLTIP, Item.sellPrice(gold: 5), ItemRarityID.Orange)
+        public GameBoyGray() : base("Gray", TOOLTIP, Item.sellPrice(gold: 5), ItemRarityID.Orange, "Gray")
         {
         }
     }

@@ -22,9 +22,15 @@ namespace tmonadds.Items.Music
 		}
 
 		public override void UpdateAccessory(Player player, bool hideVisual)
-        {
-            TAddOns.PokeMini = true;
-			TAddOns.MusicTimer += 1;
+		{
+			base.UpdateAccessory(player, hideVisual);
+			//TAddOns.Musics = MusicPath;
+			string Ver;
+			if (TAddOns.OldMusic)
+				Ver = "_Old";
+			else
+				Ver = "_New";
+			Main.musicBox2 = mod.GetSoundSlot(SoundType.Music, $"Sounds/Music/{TAddOns.pokeMini}");
 		}
-}
+	}
 }

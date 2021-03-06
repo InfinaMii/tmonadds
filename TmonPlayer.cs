@@ -9,6 +9,7 @@ using Terraria.DataStructures;
 using Microsoft.Xna.Framework;
 using System.Collections.Generic;
 using Microsoft.Xna.Framework.Graphics;
+using Terramon;
 
 namespace tmonadds
 {
@@ -16,11 +17,28 @@ namespace tmonadds
     {
         int count = 1;
         int previous = -1;
+        bool PikachuActive = false;
         public bool nullified = false;
-        public bool PokeMini = false;
         public bool Pikachu = false;
         public bool PikachuDefault = false;
-        bool PikachuActive = false;
+        public static bool GBEquipped;
+        public static bool ZoneGrayGB = false;
+        public static bool ZoneRedGB = false;
+        public static bool ZoneBlueGB = false;
+        public static bool ZoneYellowGB = false;
+        public static bool ZoneGreenGB = false;
+        public static bool ZonePinkGB = false;
+        public static bool ZoneDarkGB = false;
+        public override void UpdateBiomes()
+        {
+            ZoneGrayGB = TmonWorld.grayGB > 0;
+            ZoneRedGB = TmonWorld.redGB > 0;
+            ZoneBlueGB = TmonWorld.blueGB > 0;
+            ZoneYellowGB = TmonWorld.yellowGB > 0;
+            ZoneGreenGB = TmonWorld.greenGB > 0;
+            ZonePinkGB = TmonWorld.pinkGB > 0;
+            ZoneDarkGB = TmonWorld.darkGB > 0;
+        }
 
         public override void FrameEffects() // As above, same order, happy coding. One of the files needed to get the costume going.
         {
@@ -37,7 +55,6 @@ namespace tmonadds
                 Nullify();
             }
         }
-
         private void Nullify()
         {
             player.ResetEffects();

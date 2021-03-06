@@ -1,0 +1,4 @@
+C:\Users\popin\Documents\My Games\Terraria\ModLoader\Mod Sources\tmonadds\obj\Debug\net45\tmonadds.csprojAssemblyReference.cache
+C:\Users\popin\Documents\My Games\Terraria\ModLoader\Mod Sources\tmonadds\obj\Debug\net45\tmonadds.AssemblyInfoInputs.cache
+C:\Users\popin\Documents\My Games\Terraria\ModLoader\Mod Sources\tmonadds\obj\Debug\net45\tmonadds.AssemblyInfo.cs
+C:\Users\popin\Documents\My Games\Terraria\ModLoader\Mod Sources\tmonadds\obj\Debug\net45\tmonadds.csproj.CoreCompileInputs.cache

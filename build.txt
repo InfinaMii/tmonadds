@@ -1,6 +1,6 @@
-displayName = Terramon Expansion - 
+displayName = Terramon Expansion
 author = Terramon Team
-version = 0.1
+version = 0.2
 homepage = https://discord.gg/U8skDEA
 modReferences = Terramon
-buildIgnore = Pokemon*, Costumes*, Items/Mounts*, Items/Music/PokeMini.cs
+buildIgnore = Pokemon*, Costumes*
