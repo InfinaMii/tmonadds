@@ -1,2 +1,2 @@
 # Terramon Expansion
- Development on the Terramon Expansion mod, which includes music and other extras.
+ Source code of the 1.3 Terramon Expansion mod, which included music and other extras.
